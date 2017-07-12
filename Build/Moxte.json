@@ -1,6 +1,8 @@
 {
 "TOTAL_MEMORY": 268435456,
 "dataUrl": "Moxte.data.unityweb",
+"wasmCodeUrl": "Moxte.wasm.code.unityweb",
+"wasmFrameworkUrl": "Moxte.wasm.framework.unityweb",
 "asmCodeUrl": "Moxte.asm.code.unityweb",
 "asmMemoryUrl": "Moxte.asm.memory.unityweb",
 "asmFrameworkUrl": "Moxte.asm.framework.unityweb",
