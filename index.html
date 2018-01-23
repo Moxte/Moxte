@@ -34,8 +34,8 @@
 	alert(data.response.id);
 	var Profile = [id, Fname, Lname, "Photo"];
 	
-	SendToPlayer("OnGetPlayer", "" + Profile);
-gameInstance.SendMessage("SocialManager","RecvParams", document.local.href + '');
+SendMessage("SocialManager","OnGetPlayer", "" + Profile);
+SendMessage("SocialManager","RecvParams", document.local.href + '');
 	}
 });
 
@@ -44,13 +44,6 @@ gameInstance.SendMessage("SocialManager","RecvParams", document.local.href + '')
      // API initialization failed
      // Can reload page here
 }, '5.71');
-
-
-
-function SendToPlayer(func, what)
-{
-gameInstance.SendMessage("SocialManager", funk, what);
-}
 
 function PostToWall(text)
 {
