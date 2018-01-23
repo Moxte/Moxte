@@ -18,9 +18,9 @@
   VK.init(function() {
      // API initialization succeeded
      // Your code here
-alert('VK initialized!');
-VK.addCallback('onWindowBlur', function(settings) {UnityHide();});
-VK.addCallback('onWindowFocus', function(settings) {UnityShow();});
+	alert('VK initialized!');
+	VK.addCallback('onWindowBlur', function(settings) {UnityHide();});
+	VK.addCallback('onWindowFocus', function(settings) {UnityShow();});
 
 
   }, function() {
@@ -28,25 +28,11 @@ VK.addCallback('onWindowFocus', function(settings) {UnityShow();});
      // Can reload page here
 }, '5.71');
 
-function GetUnity()
-{
-return gameInstance;
-//u.getUnity();
-}
-//show Unity
-function UnityShow()
-{
-GetUnity().style.visibility = 'visible';
-}
-//hide Unity
-function UnityHide()
-{
-GetUnity().style.visibility = 'hidden';
-}
+
 
 function SendToPlayer(func, what)
 {
-GetUnity().SendMessage("SocialManager", funk, what);
+gameInstance.SendMessage("SocialManager", funk, what);
 }
 
 function GetParams()
