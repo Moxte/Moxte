@@ -1,6 +1,6 @@
 {
 "companyName": "DefaultCompany",
-"productName": "Simple Web Sockets",
+"productName": "Tanks",
 "dataUrl": "moxte.github.io.data.unityweb",
 "wasmCodeUrl": "moxte.github.io.wasm.code.unityweb",
 "wasmFrameworkUrl": "moxte.github.io.wasm.framework.unityweb",
