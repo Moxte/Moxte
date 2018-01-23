@@ -10,9 +10,11 @@
     <script src="Build/UnityLoader.js"></script>
 
 <script src="https://vk.com/js/api/xd_connection.js?2"  type="text/javascript"></script>
-
-<script type="text/javascript">
+<script>
 var gameInstance = UnityLoader.instantiate("gameContainer", "Build/moxte.github.io.json", {onProgress: UnityProgress});
+</script>
+<script type="text/javascript">
+//var gameInstance = UnityLoader.instantiate("gameContainer", "Build/moxte.github.io.json", {onProgress: UnityProgress});
   VK.init(function() {
      // API initialization succeeded
      // Your code here
@@ -26,7 +28,7 @@ if(data.response){
 	//var Photo = "";
 	var Profile = [id, Fname, Lname, "Photo"];
 alert(data.response[0].first_name + ' ' + data.response[0].last_name + ' ' + data.response[0].id);
-gameInstance.SendMessage("vk","GetVK","[ezr!");
+SendMessage("vk","GetVK","[ezr!");
 
 	}
 });
