@@ -28,7 +28,7 @@
 	var Profile = [id, Fname, Lname, "Photo"];
 	
 gameInstance.SendMessage("SocialManager","OnGetPlayer", "" + Profile);
-//gameInstance.SendMessage("SocialManager","RecvParams", document.local.href + '');
+gameInstance.SendMessage("SocialManager","RecvParams", document.location.href + '');
 	
 });
 
