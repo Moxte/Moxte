@@ -19,8 +19,25 @@
      // API initialization succeeded
      // Your code here
 	alert('VK initialized!');
-	//VK.addCallback('onWindowBlur', function(settings) {UnityHide();});
-	//VK.addCallback('onWindowFocus', function(settings) {UnityShow();});
+	VK.api('users.get', "{user_ids : '1'}", function(data)
+	{ 
+	var id = "";
+	var Fname = "";
+	var Lname = "";
+	//var Photo = "";
+	if(data.response)
+	{
+	id = data['response']['0']['id'];
+	Fname = data.response[0]['first_name'];
+	Lname = data.response[0]['last_name'];
+	//Photo = data.response[0]['photo'];
+	alert(data.response.id);
+	var Profile = [id, Fname, Lname, "Photo"];
+	
+	SendToPlayer("OnGetPlayer", "" + Profile);
+gameInstance.SendMessage("SocialManager","RecvParams", document.local.href + '');
+	}
+});
 
 
   }, function() {
@@ -35,34 +52,6 @@ function SendToPlayer(func, what)
 gameInstance.SendMessage("SocialManager", funk, what);
 }
 
-function GetParams()
-{
-SendToPlayer("RecvParams", document.local.href + '');
-}
-
-function GetProfile(uid)
-{
-VK.api('users.get', "{user_ids : '1'}", function(data)
-{
-
-      
-	var id = "";
-	var Fname = "";
-	var Lname = "";
-	var Photo = "";
-	if(data.response)
-	{
-	id = data['response']['0']['id'];
-	Fname = data.response[0]['first_name'];
-	Lname = data.response[0]['last_name'];
-	//Photo = data.response[0]['photo'];
-	alert(data.response.id);
-	var Profile = [id, Fname, Lname, "Photo"];
-	
-	SendToPlayer("OnGetPlayer", "" + Profile);
-	}
-});
-}
 function PostToWall(text)
 {
 //var photo_num = "photo-813187238172";
