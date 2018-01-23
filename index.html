@@ -19,7 +19,7 @@
      // API initialization succeeded
      // Your code here
 	alert('VK initialized!');
-	VK.api('users.get', {user_ids: 1}, function(data)
+	VK.api('users.get', {uids: viewer_id}, function(data)
 	{ 
 if(data.response){
 	var id = data.response[0].id;
