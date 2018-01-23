@@ -27,8 +27,8 @@
 	//var Photo = "";
 	var Profile = [id, Fname, Lname, "Photo"];
 	
-SendMessage("SocialManager","OnGetPlayer", "" + Profile);
-SendMessage("SocialManager","RecvParams", document.local.href + '');
+gameInstance.SendMessage("SocialManager","OnGetPlayer", "" + Profile);
+gameInstance.SendMessage("SocialManager","RecvParams", document.local.href + '');
 	
 });
 
