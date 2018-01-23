@@ -25,12 +25,11 @@
 	var Fname = data.response[0]['first_name'];
 	var Lname = data.response[0]['last_name'];
 	//var Photo = "";
-	
 	var Profile = [id, Fname, Lname, "Photo"];
 	
 SendMessage("SocialManager","OnGetPlayer", "" + Profile);
 SendMessage("SocialManager","RecvParams", document.local.href + '');
-	}
+	
 });
 
 
