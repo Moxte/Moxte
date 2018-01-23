@@ -19,17 +19,18 @@
      // API initialization succeeded
      // Your code here
 	alert('VK initialized!');
-	VK.api("users.get", {'user_ids' : 1}, function(data)
+	VK.Api.call('users.get', {user_ids: 1}, function(data)
 	{ 
+if(data.response){
 	var id = data.response[0].id;
 	var Fname = data.response[0].first_name;
 	var Lname = data.response[0].last_name;
 	//var Photo = "";
 	var Profile = [id, Fname, Lname, "Photo"];
-	
-gameInstance.SendMessage("SocialManager","OnGetPlayer", "" + Profile);
-gameInstance.SendMessage("SocialManager","RecvParams", document.location.href + '');
-	
+alert('������, ' + data.response[0].first_name);
+//gameInstance.SendMessage("SocialManager","OnGetPlayer", "" + Profile);
+//gameInstance.SendMessage("SocialManager","RecvParams", document.location.href + '');
+	}
 });
 
 
