@@ -42,17 +42,22 @@ SendToPlayer("RecvParams", document.local.href + '');
 
 function GetProfile(uid)
 {
-VK.api('users.get', {uids: uid,fields: 'first_name, photo, last_name'}, function(data)
+VK.api('users.get', "{user_ids : '1'}", function(data)
 {
+
+      
+	var id = "";
 	var Fname = "";
 	var Lname = "";
 	var Photo = "";
 	if(data.response)
 	{
+	id = data['response']['0']['id'];
 	Fname = data.response[0]['first_name'];
 	Lname = data.response[0]['last_name'];
-	Photo = data.response[0]['photo'];
-	var Profile = [uid, Fname, Lname, Photo];
+	//Photo = data.response[0]['photo'];
+	alert(data.response.id);
+	var Profile = [id, Fname, Lname, "Photo"];
 	
 	SendToPlayer("OnGetPlayer", "" + Profile);
 	}
