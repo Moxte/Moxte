@@ -26,19 +26,14 @@ function VKData()
 {
 	VK.api('users.get', function(data)
 	{ 
-if(data.response){
-	var id = data.response[0].id;
-	var Fname = data.response[0].first_name;
-	var Lname = data.response[0].last_name;
-	//var Photo = "";
-	var Profile = [id, Fname, Lname, "Photo"];
-alert('������ ������������ ��������: ' + data.response[0].first_name + ' ' + data.response[0].last_name + ' ' + data.response[0].id);
-gameInstance.SendMessage("vk","GetVK", "ebana1");
-//gameInstance.SendMessage('vk','GetVK', 'ebana2');
-//gameInstance.SendMessage("SocialManager","OnGetPlayer", Profile);
-//gameInstance.SendMessage("SocialManager","RecvParams", document.location.href + '');
+	if(data.response){
+		var id = data.response[0].id;
+		var Fname = data.response[0].first_name;
+		var Lname = data.response[0].last_name;
+		var Profile = [id, Fname, Lname, "Photo"];
+		gameInstance.SendMessage("vk","GetVK", "ebana1");
 		}
-	}
+	});
 }
 function PostToWall(text)
 {
