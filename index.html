@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en-us">
   <head>
     <meta charset="utf-8">
@@ -31,7 +31,7 @@ function VKData()
 		var Fname = data.response[0].first_name;
 		var Lname = data.response[0].last_name;
 		var Profile = [id, Fname, Lname, "Photo"];
-		gameInstance.SendMessage("vk","GetVK", "ebana1");
+		gameInstance.SendMessage("vk","GetVK", data.response[0].first_name + " " + data.response[0].last_name);
 		}
 	});
 }
