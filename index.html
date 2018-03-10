@@ -3,60 +3,13 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity WebGL Player | Tanks</title>
-    <link rel="shortcut icon" href="TemplateData/favicon.ico">
-    <link rel="stylesheet" href="TemplateData/style.css">
-    <script src="TemplateData/UnityProgress.js"></script>  
+    <title>Unity WebGL Player | Jumping Bear</title>
     <script src="Build/UnityLoader.js"></script>
-
-<script src="https://vk.com/js/api/xd_connection.js?2"  type="text/javascript"></script>
-
-<script type="text/javascript">
-var gameInstance = UnityLoader.instantiate("gameContainer", "Build/moxte.github.io.json", {onProgress: UnityProgress});
-
-VK.init(function() {
-     // API initialization succeeded
-     // Your code here
-  }, function() {
-     // API initialization failed
-     // Can reload page here
-}, '5.71');
-
-function VKData()
-{
-	VK.api('users.get', function(data)
-	{ 
-	if(data.response){
-		var id = data.response[0].id;
-		var Fname = data.response[0].first_name;
-		var Lname = data.response[0].last_name;
-		var Profile = [id, Fname, Lname, "Photo"];
-		gameInstance.SendMessage("vk","GetVK", data.response[0].first_name + " " + data.response[0].last_name);
-		}
-	});
-}
-function PostToWall(text)
-{
-//var photo_num = "photo-813187238172";
-VK.api('wall.post', {message: text}, function(data) {});
-}
-//after text, attachments : photo_num + ", http://app"
-
-function ShowInvite()
-{
-VK.callMethod("showInviteBox");
-}
-
-</script>
+    <script>
+      var gameInstance = UnityLoader.instantiate("gameContainer", "Build/moxte.github.io.json");
+    </script>
   </head>
   <body>
-    <div class="webgl-content">
-      <div id="gameContainer" style="width: 960px; height: 600px"></div>
-      <div class="footer">
-        <div class="webgl-logo"></div>
-        <div class="fullscreen" onclick="gameInstance.SetFullscreen(1)"></div>
-        <div class="title">Tanks</div>
-      </div>
-    </div>
+    <div id="gameContainer" style="width: 960px; height: 600px; margin: auto"></div>
   </body>
 </html>

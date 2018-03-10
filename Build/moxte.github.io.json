@@ -1,9 +1,7 @@
 {
 "companyName": "DefaultCompany",
-"productName": "Tanks",
+"productName": "Jumping Bear",
 "dataUrl": "moxte.github.io.data.unityweb",
-"wasmCodeUrl": "moxte.github.io.wasm.code.unityweb",
-"wasmFrameworkUrl": "moxte.github.io.wasm.framework.unityweb",
 "asmCodeUrl": "moxte.github.io.asm.code.unityweb",
 "asmMemoryUrl": "moxte.github.io.asm.memory.unityweb",
 "asmFrameworkUrl": "moxte.github.io.asm.framework.unityweb",
